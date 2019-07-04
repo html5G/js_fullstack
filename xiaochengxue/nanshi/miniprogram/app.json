@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/liandong/liandong",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/dongtai/dongtai"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "南师轩",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#AB956D",
+    "borderStyle": "black",
+    "backgroundColor": "#f5f5f5",
+    "selectedindex": 1,
+    "list": [
+      {
+        "pagePath": "pages/liandong/liandong",
+        "iconPath": "images/dy.png",
+        "selectedIconPath": "images/dy1.png",
+        "text": "联动"
+      },
+      {
+        "pagePath": "pages/dongtai/dongtai",
+        "iconPath": "images/fu.png",
+        "selectedIconPath": "images/fu1.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/in.png",
+        "selectedIconPath": "images/in1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
