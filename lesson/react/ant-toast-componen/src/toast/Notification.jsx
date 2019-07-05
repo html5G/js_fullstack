@@ -11,7 +11,7 @@ class Notification  extends Component {
     return `notice-${new Date().getTime()}-${notices.length}`
   }
   addNotice = (notice) => {
-    console.log(notice);
+    console.log('55',notice);
     const { notices } = this.state;
     notice.key = this.getNoticeKey();
     notices.push(notice);
