@@ -1,0 +1,8 @@
+.test {
+    --fontColor: yellowgreen;
+    color: var(--fontColor)
+}
+.homeAvtar {
+    width: 100%;
+    height: 100%;
+}
