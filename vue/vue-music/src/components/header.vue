@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-icon">
+    <div class="header-icon" @click="leftEvent">
       <slot name="left-icon"></slot>
     </div>
     <div class="header-cont">
@@ -13,7 +13,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    leftEvent() {
+      this.$store.dispatch('setShowSidebar',true)
+    }
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
