@@ -60,6 +60,7 @@ class Recommend extends Component {
     return albumList.map(item => {
       // 渲染 album
       const album = createAlbumByItem(item);
+      // console.log('111',album)
       return (
         <div className="album-wrapper" key={album.mId}
         onClick={this.handleToAlbumDetail(`${match.url}/${album.mId}`)}
@@ -105,10 +106,11 @@ class Recommend extends Component {
     const { refreshScroll } = this.state;
     const { match } = this.props;
     return (
+      <Scroll refresh={refreshScroll}
+      onScroll={forceCheck}
+      >
       <div className="music-recommend">
-        <Scroll refresh={refreshScroll}
-        onScroll={forceCheck}
-        >
+
           <div>
             <div className="slider-container">
               {/* slider -> swiper */}
@@ -124,10 +126,11 @@ class Recommend extends Component {
               </div>
             </div>
           </div>
-        </Scroll>
+        
         <Loading title="正在加载中..." show={this.state.show} />
         <Route path={`${match.url}/:id`} component={Album}/>
       </div>
+      </Scroll>
     );
   }
 }
