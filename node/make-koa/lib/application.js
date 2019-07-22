@@ -4,14 +4,19 @@ const http = require('http')
 const context = require('./context')
 const request = require('./request')
 const response = require('./response')
+const compose = require('./compose')
 module.exports = class Application extends Emitter {
     constructor() {
         super();
+        this.middleware = []
         this.context = Object.create(context)
         this.request = Object.create(request)
         this.response = Object.create(response)
     }
-    use() {}
+    use(fn) {
+        this.middleware.push(fn)
+        return this
+    }
     listen(...arg) {
         const server = http.createServer(this.callback())
         server.listen(...arg)
@@ -28,6 +33,7 @@ module.exports = class Application extends Emitter {
         return context
     }
     callback() {
+        const fn = compose(this.middleware)
         const handleRequest = (req,res) => {
             const ctx = this.createContext(req,res)
             console.log(ctx.url,ctx.url === ctx.request.url)
