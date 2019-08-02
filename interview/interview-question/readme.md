@@ -13,3 +13,6 @@
 
 - q5 数组去重
   Set typeOf includes map reduce
+
+  click在ios手机上有300ms延迟，原因与解决方法
+    1. <meta>
