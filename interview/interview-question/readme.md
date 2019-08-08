@@ -16,3 +16,23 @@
 
   click在ios手机上有300ms延迟，原因与解决方法
     1. <meta>
+
+- q11 任务列表
+  marcotask(宏观任务)：
+    setTimeout  setInterval  requestAnimationFrame  HTML的解析  js的主线程
+  mircotask(微观任务)
+    promise  mutation.oberver  process.nextTick
+    
+  script(主程序代码) --> process.nextTick  -->  promise  --> setTimeout -->
+    setInterval --> setImmediate --> I/O --> UI rendeing
+  
+- q12 浏览器的重绘和回旋
+  浏览器渲染页面的过程
+    1. 解析HTML，生成DOM树，解析CSS，生成CSSOM树
+    2. 将DOM树和CSSOM树结合生成render树
+    3. 回流： 根据生成的render树进行回流，得到节点的几何信息
+    4. 重绘： 根据render树和回流得到的信息，得到节点的绝对像素
+    5. 将像素发给GPU，展示在页面上
+  
+  vue子组件能否修改接收到的props里面的值
+    不能  为了保证数据的单向流动，便于数据的追踪，避免数据混乱
