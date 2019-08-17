@@ -4,7 +4,7 @@ import Cookie from 'js-cookie'
 
 const instance = axios.create({
   timeout: 60000,
-  baseURL: '/'
+  // baseURL: '/'
 })
 const COOKIE_NAME = 'movie_trailer_user'
 
