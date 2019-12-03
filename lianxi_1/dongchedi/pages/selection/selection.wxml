@@ -1,0 +1,28 @@
+<!--pages/selection/selection.wxml-->
+<view class="page">
+  <view class="chexing">
+    <view class="da" bindtap="da"> 
+      <image class="che" src="/image/dazhong.png" />
+     <text>大众</text>
+    </view>
+    <view class="ao" bindtap="ao"> 
+      <image class="che" src="/image/aodi.png" />
+      <text>奥迪</text>
+     </view>
+     <view class="beng" bindtap="beng"> 
+      <image class="che" src="/image/benchi.png" />
+      <text>奔驰</text>
+    </view>
+    <view class="bao" bindtap="bao"> 
+      <image class="che" src="/image/baoma.png" />
+      <text>宝马</text>
+    </view>
+  </view>
+
+  <view class="chexing2">
+    <view class=""></view>
+    <view class=""></view>
+  </view>
+
+  <view></view>
+</view>

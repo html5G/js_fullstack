@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/selection/selection",
+   
+    
+    "pages/fabu/fabu"
+  ],
+  "window": {
+    "navigationBarTitleText": "懂车帝",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ededed"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#ededed",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "image/sy1.png",
+        "selectedIconPath": "image/sy.png"
+      },
+      {
+        "text": "选车",
+        "pagePath": "pages/selection/selection",
+        "iconPath": "image/cl1.png",
+        "selectedIconPath": "image/cl.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

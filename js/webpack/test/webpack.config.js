@@ -1,0 +1,31 @@
+// 打包配置
+// 如果没有这个文件，默认配置
+// src/开发目录
+// dist/打包目录
+// sec/index.js
+
+const path = require('path');
+module.exports = {
+    //入口
+    entry:'./src/index',
+    //出口
+    output: {
+        path:path.resolve(_dirname,'dist'),
+        filename:'[name].js'
+    },
+    module: {
+        // babel,
+        // stylus,
+        // // 静态资源
+        rules: [
+            {
+                test: /\.js$/,
+                include: [path.resolve(_dirname,'src')],
+                use: 'babel-loader' 
+            }
+        ]
+    },
+    resolve: {
+        extensions:['.js']
+    }
+}

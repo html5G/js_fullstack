@@ -1,0 +1,20 @@
+<view class="bg">
+ <view class="body">
+  <view class="sing-brief">
+   <view class="song-name">{{song.name}}</view>
+    <view class="singer-name">
+      <text wx:for="{{song.ar}}">{{item.name}}</text>
+     </view>
+  </view>
+  <view class="sing-show">
+    <image src="../../images/yuanpai.png" class="stick" />
+    <image src="../../images/erji.png" class="disk" />
+    <image src="{{song.al.picUrl}}" class="coverImage {{isPlay ? 'play':''}}" />
+  </view>
+  <view>
+      <button type="primary" bindtap="togglePlayStatus">
+          {{isPlay ? ' 暂停':'播放'}}
+      </button>
+  </view>
+ </view>
+</view>

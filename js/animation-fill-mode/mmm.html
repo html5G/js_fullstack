@@ -1,0 +1,471 @@
+<html lang="zh-CN" style="font-size: 37.5px;"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>2018年京东校园招聘</title>
+
+  <!-- 不要删除或改变下面这行代码 -->
+  
+<!-- begin REM Zoom 计算 -->
+<script src="//pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500470721" cid="500470727"></script><script src="//wqs.jd.com/promote/quark/atlogs.2.0.min.js"></script><script type="text/javascript">
+  (function (win) {
+    var remCalc = {};
+    var docEl = win.document.documentElement,
+      tid,
+      hasRem = true,
+      hasZoom = true,
+      zoomRuler = 'width',
+      designWidth = 750,
+      designHeight = 1206;
+
+    function refresh() {
+      var width = docEl.clientWidth;
+      var height = docEl.clientHeight;
+      if (width > 768) { width = 768 }
+      if (hasRem) {
+        var rem = width / 10;
+        docEl.style.fontSize = rem + "px";
+        remCalc.rem = rem;
+        var actualSize = parseFloat(window.getComputedStyle(document.documentElement)["font-size"]);
+        if (actualSize !== rem && actualSize > 0 && Math.abs(actualSize - rem) > 1) {
+          var remScaled = rem * rem / actualSize;
+          docEl.style.fontSize = remScaled + "px"
+        }
+      }
+      if (hasZoom) {
+        var style = document.getElementById('J__style')
+        if (!style) {
+          style = document.createElement('style')
+          style.id = 'J__style'
+        }
+        if (zoomRuler === 'height') {
+          style.innerHTML = '.__z{zoom:' + height / designHeight + '}'
+        } else {
+          style.innerHTML = '.__z{zoom:' + width / designWidth + '}'
+        }
+        document.getElementsByTagName('head')[0].appendChild(style)
+      }
+    }
+
+    function dbcRefresh() {
+      clearTimeout(tid);
+      tid = setTimeout(refresh, 100)
+    }
+    win.addEventListener("resize", function () {
+      dbcRefresh()
+    }, false);
+
+    win.addEventListener("pageshow", function (e) {
+      if (e.persisted) {
+        dbcRefresh()
+      }
+    }, false);
+    refresh();
+    if (hasRem) {
+      remCalc.refresh = refresh;
+      remCalc.rem2px = function (d) {
+        var val = parseFloat(d) * this.rem;
+        if (typeof d === "string" && d.match(/rem$/)) {
+          val += "px"
+        }
+        return val
+      };
+      remCalc.px2rem = function (d) {
+        var val = parseFloat(d) / this.rem;
+        if (typeof d === "string" && d.match(/px$/)) {
+          val += "rem"
+        }
+        return val
+      };
+      win.remCalc = remCalc
+    }
+  })(window);
+
+</script>
+<!-- end REM Zoom 计算 -->
+
+<link href="./css/app_10dbb2.css" rel="stylesheet"><style id="J__style">.__z{zoom:0.5}</style></head>
+<body>
+  <div class="container">
+    <!-- S Loading 页面 -->
+    
+    <!-- E Loading 页面 -->
+
+    <!-- S 消息提醒 -->
+    <div class="popup popup-message hide" id="J-message-popup" data-lock="1">
+      <div class="popup__cnt">
+        <div class="icon-pc"></div>
+        <div class="text-pc"></div>
+        <div class="btn-close" data-attag="btn-backto-home" id="J-btn-home">回到首页</div>
+        <div class="text-word" data-modal="J-share-popup" data-attag="btn-share"></div>
+      </div>
+    </div>
+    <!-- E 消息提醒 -->
+
+    <!-- S 分享弹框 -->
+    <div class="popup popup-share hide" id="J-share-popup">
+      <div class="popup__cnt" data-close="dialog">
+        <div class="share-element"></div>
+      </div>
+    </div>
+    <!-- E 分享弹框 -->
+
+    <!-- S 上传需知 -->
+    <div class="popup popup-rule hide" id="J-rule-popup" data-lock="1">
+      <div class="popup__cnt">
+        <div class="title">上传需知</div>
+        <div class="text">
+          1、上传视频不是应聘过程中的必须环节，应聘者可自愿选择是否上传视频<br><br>
+          2、视频介绍中确保只出现应聘者本人，介绍内容可以是个人经历、兴趣爱好、性格特点或职业目标等<br><br>
+          3、视频录制建议在 WIFI 下体验，时长在1分钟内，上传小于10M效果最佳<br><br>
+          4、视频上传后，请前往京东校招官网 CAMPUS.JD.COM 投递简历，面试官会在初筛简历时看到你录制的视频
+        </div>
+        <div class="btn-close" data-close="dialog">我知道了</div>
+      </div>
+    </div>
+    <!-- E 上传需知 -->
+
+    <!-- S 全屏视频 -->
+    <div class="popup popup-video hide" id="J-video-popup">
+      <div class="popup__cnt">
+        <div class="fullscreen-video" id="J-fullscreen">
+          <div class="player" id="J-player"></div>
+          <div class="icon-close" id="J-btn-close-video"></div>
+          <div class="icon-delete" id="J-btn-delete-video"></div>
+        </div>
+      </div>
+    </div>
+    <!-- E 全屏视频 -->
+
+    <!-- S 微简历 -->
+     <div class="popup popup-resume hide" id="J-resume-popup">
+      <div class="cube-1"><span></span></div>
+      <div class="text-title">填写信息</div>
+      <div class="form-container">
+        <div class="form-item">
+          <label for="">姓名</label>
+          <input class="origin-font" type="text" name="name" id="J-personname" placeholder="请输入你的真实姓名">
+        </div>
+        <div class="form-item">
+          <label for="">性别</label>
+          <div class="select-container">
+            <select class="origin-font" id="J-sex" name="sex">
+              <option value="">请选择性别</option>
+              <option value="male">男</option>
+              <option value="female">女</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-item">
+          <label for="">学校</label>
+          <div class="search-container">
+            <input class="origin-font" type="text" name="school" id="J-schoolname" placeholder="请填写学校的全称（如：北京大学）">
+            <input type="hidden" id="J-schoolcode">
+            <i class="icon-close hide" id="J-search-close"></i>
+          </div>
+          <ul class="origin-font search-cnt hide" id="J-result-cnt"></ul>
+        </div>
+        <div class="form-item">
+          <label for="">手机号码</label>
+          <input class="origin-font" id="J-phonenum" type="text" placeholder="请输入你的手机号码" pattern="\d*" maxlength="11">
+        </div>
+        <div class="form-item">
+          <label for="">验证码</label>
+          <input class="origin-font" id="J-verifycode" type="text" placeholder="请输入验证码" pattern="\d*" maxlength="6">
+          <span class="captcha" id="J-get-captcha">获取验证码</span>
+        </div>
+      </div>
+      <div class="btn-confirm" id="J-btn-submit" data-attag="btn-confirm">确认</div>
+      <div class="btn-close" data-close="dialog" data-attag="btn-cancel">取消</div>
+    </div>
+    <!-- E 微简历 -->
+
+    <!-- S 提示确认框 -->
+    <div class="popup popup-tips hide" id="J-tips-popup" data-lock="1">
+      <div class="popup__cnt">
+        <div class="popup__dialog origin-font">
+          <p class="text" id="J-tips-text">确定删除视频吗？</p>
+          <div class="btns">
+             <div class="btn btn-confirm">确定</div>
+             <div class="btn btn-close" data-close="dialog">取消</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- E 提示确认框 -->
+
+    <!-- S 全局元素 -->
+    <div class="global-container s1">
+      <div class="music-icon" id="J-btn-music" data-attag="btn-music">
+        <svg class="on" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="Fill-2">
+              <path d="M0,50 L50,50 L50,0 L0,0 L0,50 Z M36,13.001 L38,13.001 L38,11 L36,11 L36,13.001 Z M33.001,13.001 L35,13.001 L35,11 L33.001,11 L33.001,13.001 Z M30,13.001 L32,13.001 L32,11 L30,11 L30,13.001 Z M27,13.001 L29,13.001 L29,11 L27,11 L27,13.001 Z M24.001,13.001 L26,13.001 L26,11 L24.001,11 L24.001,13.001 Z M36,16 L38,16 L38,14 L36,14 L36,16 Z M33.001,16 L35,16 L35,14 L33.001,14 L33.001,16 Z M30,16 L32,16 L32,14 L30,14 L30,16 Z M27,16 L29,16 L29,14 L27,14 L27,16 Z M24.001,16 L26,16 L26,14 L24.001,14 L24.001,16 Z M27,19 L29,19 L29,17 L27,17 L27,19 Z M24.001,19 L26,19 L26,17 L24.001,17 L24.001,19 Z M27,22 L29,22 L29,19.999 L27,19.999 L27,22 Z M24.001,22 L26,22 L26,19.999 L24.001,19.999 L24.001,22 Z M27,25 L29,25 L29,23 L27,23 L27,25 Z M24.001,25 L26,25 L26,23 L24.001,23 L24.001,25 Z M27,27.999 L29,27.999 L29,25.999 L27,25.999 L27,27.999 Z M24.001,27.999 L26,27.999 L26,25.999 L24.001,25.999 L24.001,27.999 Z M21,27.999 L23,27.999 L23,25.999 L21,25.999 L21,27.999 Z M17.999,27.999 L20,27.999 L20,25.999 L17.999,25.999 L17.999,27.999 Z M15.001,27.999 L17,27.999 L17,25.999 L15.001,25.999 L15.001,27.999 Z M27,31 L29,31 L29,28.999 L27,28.999 L27,31 Z M24.001,31 L26,31 L26,28.999 L24.001,28.999 L24.001,31 Z M21,31 L23,31 L23,28.999 L21,28.999 L21,31 Z M17.999,31 L20,31 L20,28.999 L17.999,28.999 L17.999,31 Z M15.001,31 L17,31 L17,28.999 L15.001,28.999 L15.001,31 Z M12,31 L14,31 L14,28.999 L12,28.999 L12,31 Z M27,34 L29,34 L29,32.001 L27,32.001 L27,34 Z M24.001,34 L26,34 L26,32.001 L24.001,32.001 L24.001,34 Z M21,34 L23,34 L23,32.001 L21,32.001 L21,34 Z M17.999,34 L20,34 L20,32.001 L17.999,32.001 L17.999,34 Z M15.001,34 L17,34 L17,32.001 L15.001,32.001 L15.001,34 Z M12,34 L14,34 L14,32.001 L12,32.001 L12,34 Z M27,37 L29,37 L29,35 L27,35 L27,37 Z M24.001,37 L26,37 L26,35 L24.001,35 L24.001,37 Z M21,37 L23,37 L23,35 L21,35 L21,37 Z M17.999,37 L20,37 L20,35 L17.999,35 L17.999,37 Z M15.001,37 L17,37 L17,35 L15.001,35 L15.001,37 Z M12,37 L14,37 L14,35 L12,35 L12,37 Z M24.001,40 L26,40 L26,38 L24.001,38 L24.001,40 Z M21,40 L23,40 L23,38 L21,38 L21,40 Z M17.999,40 L20,40 L20,38 L17.999,38 L17.999,40 Z M15.001,40 L17,40 L17,38 L15.001,38 L15.001,40 Z"></path>
+            </g>
+          </g>
+        </svg>
+        <svg class="off" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+            <g id="Fill-1">
+              <path d="M0,50 L50,50 L50,0 L0,0 L0,50 Z M36,13.001 L38,13.001 L38,11 L36,11 L36,13.001 Z M33,13.001 L34.999,13.001 L34.999,11 L33,11 L33,13.001 Z M30,13.001 L32,13.001 L32,11 L30,11 L30,13.001 Z M27,13.001 L29,13.001 L29,11 L27,11 L27,13.001 Z M24,13.001 L25.999,13.001 L25.999,11 L24,11 L24,13.001 Z M15,13.001 L17,13.001 L17,11 L15,11 L15,13.001 Z M12,13.001 L14.001,13.001 L14.001,11 L12,11 L12,13.001 Z M36,16 L38,16 L38,14 L36,14 L36,16 Z M33,16 L34.999,16 L34.999,14 L33,14 L33,16 Z M30,16 L32,16 L32,14 L30,14 L30,16 Z M27,16 L29,16 L29,14 L27,14 L27,16 Z M18,16.001 L20,16.001 L20,14 L18,14 L18,16.001 Z M15,16.001 L17,16.001 L17,14 L15,14 L15,16.001 Z M21,19 L23.001,19 L23.001,17 L21,17 L21,19 Z M18,19 L20,19 L20,17 L18,17 L18,19 Z M24,19.999 L25.999,19.999 L25.999,20 L26,20 L26,22 L24,22 L24,19.999 Z M21,22 L23.001,22 L23.001,20 L21,20 L21,22 Z M27,25.001 L29,25.001 L29,23 L27,23 L27,25.001 Z M24,25.001 L26,25.001 L26,23 L24,23 L24,25.001 Z M27,28 L29,28 L29,25.999 L27,25.999 L27,28 Z M24,27.999 L25.999,27.999 L25.999,25.999 L24,25.999 L24,27.999 Z M21,27.999 L23,27.999 L23,25.999 L21,25.999 L21,27.999 Z M18,27.999 L20,27.999 L20,25.999 L18,25.999 L18,27.999 Z M15,27.999 L16.999,27.999 L16.999,25.999 L15,25.999 L15,27.999 Z M30,28 L32.001,28 L32.001,26 L30,26 L30,28 Z M27,31 L29,31 L29,28.999 L27,28.999 L27,31 Z M24,31 L25.999,31 L25.999,28.999 L24,28.999 L24,31 Z M21,31 L23,31 L23,28.999 L21,28.999 L21,31 Z M18,31 L20,31 L20,28.999 L18,28.999 L18,31 Z M15,31 L16.999,31 L16.999,28.999 L15,28.999 L15,31 Z M12,31 L14.001,31 L14.001,28.999 L12,28.999 L12,31 Z M33,31 L35,31 L35,29 L33,29 L33,31 Z M30,31 L32.001,31 L32.001,29 L30,29 L30,31 Z M36,34 L38,34 L38,32.001 L36,32.001 L36,34 Z M33,34 L35,34 L35,32.001 L33,32.001 L33,34 Z M27,34 L29,34 L29,32.001 L27,32.001 L27,34 Z M24,34 L25.999,34 L25.999,32.001 L24,32.001 L24,34 Z M21,34 L23,34 L23,32.001 L21,32.001 L21,34 Z M18,34 L20,34 L20,32.001 L18,32.001 L18,34 Z M15,34 L16.999,34 L16.999,32.001 L15,32.001 L15,34 Z M12,34 L14.001,34 L14.001,32.001 L12,32.001 L12,34 Z M39,37 L41.001,37 L41.001,35 L39,35 L39,37 Z M36,37 L38,37 L38,35 L36,35 L36,37 Z M27,37 L29,37 L29,35 L27,35 L27,37 Z M24,37 L25.999,37 L25.999,35 L24,35 L24,37 Z M21,37 L23,37 L23,35 L21,35 L21,37 Z M18,37 L20,37 L20,35 L18,35 L18,37 Z M15,37 L16.999,37 L16.999,35 L15,35 L15,37 Z M12,37 L14.001,37 L14.001,35 L12,35 L12,37 Z M24,40 L25.999,40 L25.999,38 L24,38 L24,40 Z M21,40 L23,40 L23,38 L21,38 L21,40 Z M18,40 L20,40 L20,38 L18,38 L18,40 Z M15,40 L16.999,40 L16.999,38 L15,38 L15,40 Z"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="navigation hide">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="g-arrow-down" data-attag="arrow-down">
+        <svg width="29px" height="45px" viewBox="0 0 29 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(1.000000, 0.000000)" stroke-width="4">
+              <polyline id="Stroke-1" points="0.3566 30 13.3566 42 26.3566 30"></polyline>
+              <path d="M13.3566,40 L13.3566,0" id="Stroke-3"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!-- E 全局元素 -->
+
+    <!-- S 主界面 -->
+    <div class="pages swiper-container swiper-container-vertical" id="pages">
+      <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+        <!-- S Slogon 页面 -->
+        <div class="swiper-slide p1 swiper-slide-active" style="height: 812px;">
+          <!-- <div class="cube-cnt-1">
+            <div class="cube-1"><span></span></div>
+          </div>
+          <div class="cube-cnt-2">
+            <div class="cube-2"><span></span></div>
+          </div> -->
+          <div class="light"></div>
+          <div class="slogon">这是一家以速度见长的公司</div>
+        </div>
+        <!-- E Slogon 页面 -->
+        <!-- S JOY 场景 -->
+        <div class="swiper-slide p2 swiper-slide-next" id="J-swiper-scene-2" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <div class="light" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.15" style="transform: translate3d(-0.2px, 1.1px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">The speed of life beginning</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快才拥有可能，这是一家以速度见长的公司</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-1" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-formatting-mark odometer-radix-mark">.</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">4</span></span></span></span></span></div></div>
+        </div>
+        <!-- E JOY 场景 -->
+        <!-- S MAX 场景 -->
+        <div class="swiper-slide p3" id="J-swiper-scene-3" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <div class="light-1" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="light-2" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">The glory of the human race</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快为满足期待，专属定制成长方案，要你不负众望</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-2" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-formatting-mark odometer-radix-mark">.</span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span></div></div>
+        </div>
+        <!-- E MAX 场景 -->
+        <!-- S BLINK 场景 -->
+        <div class="swiper-slide p4" id="J-swiper-scene-4" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <div class="light" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">The thrill of diving from the peak</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快为取悦自己，加班调休1:1，越努力越快乐</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-3" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>
+        </div>
+        <!-- E BLINK 场景 -->
+        <!-- S YUMMY 场景 -->
+        <div class="swiper-slide p5" id="J-swiper-scene-5" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <!-- <div class="light-1" data-depth="0.2"></div> -->
+          <div class="light-2" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">The roar of F1 engines</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快以驾驭更强，不谈自理，京东『七分熟』就启用新人</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-4" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>
+        </div>
+        <!-- E YUMMY 场景 -->
+        <!-- S SNOW 场景 -->
+        <div class="swiper-slide p6" id="J-swiper-scene-6" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <div class="light" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">Breaking free from Earth's gravity</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快为挣脱束缚，开放宽广的职业选择，尽情展翅</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-5" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>
+        </div>
+        <!-- E SNOW 场景 -->
+        <!-- S CHILL 场景 -->
+        <div class="swiper-slide p7" id="J-swiper-scene-7" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="20" data-scalar-y="10" style="height: 812px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block;"></div>
+          <div class="light-1" data-depth="0.35" style="transform: translate3d(-0.6px, 2.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="light-2" data-depth="0.3" style="transform: translate3d(-0.5px, 2.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="dog" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"></div>
+          <div class="text text-top" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">Exceeding the speed of light</div>
+          <div class="text text-bottom" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;">快以最快的自己更快，更快达到你想要的未来</div>
+          <div class="num font-steelfib odometer odometer-auto-theme" id="J-num-6" data-depth="0.2" style="transform: translate3d(-0.3px, 1.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block;"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">9</span></span></span></span></span></div></div>
+        </div>
+        <!-- E CHILL 场景 -->
+        <!-- S 首页 -->
+        <div class="swiper-slide p8" style="height: 812px;">
+          <canvas id="J-particle-canvas" width="1366" height="625"></canvas>
+          <div class="logo-ran">燃</div>
+          <div class="text-slogon">更快到达你想要的未来</div>
+          <div class="cube-1"><span></span></div>
+          <div class="cube-cnt-2">
+            <div class="cube-2"><span></span></div>
+          </div>
+          <div class="cube-cnt-3">
+            <div class="cube-3"><span></span></div>
+          </div>
+          <div class="text-title">京东2018校园招聘</div>
+          <div class="text-detail">招聘人群： 2018年毕业<br>全日制本科、硕士、博士</div>
+          <div class="logo-jd">京东招聘</div>
+        </div>
+        <!-- E 首页 -->
+        <!-- S 招聘流程 -->
+        <div class="swiper-slide p9" style="height: 812px;">
+          <div class="cube-1"><span></span></div>
+          <div class="text-title">招聘流程</div>
+          <div class="schedule-cnt">
+            <div class="part part-1">
+              <div class="date">08月15日</div>
+              <div class="content">线下宣讲开始</div>
+            </div>
+            <div class="part part-2">
+              <div class="date">09月07日-09月08日</div>
+              <div class="content">在线笔试</div>
+            </div>
+            <div class="part part-3">
+              <div class="date">09月16日-09月27日</div>
+              <div class="content">线下面试</div>
+            </div>
+            <div class="part part-4">
+              <div class="date">10月中旬</div>
+              <div class="content">OFFER发放</div>
+            </div>
+          </div>
+        </div>
+        <!-- E 招聘流程 -->
+        <!-- S 办公地点 -->
+        <div class="swiper-slide p10" style="height: 812px;">
+          <div class="cube-1"><span></span></div>
+          <div class="text-title">办公地点</div>
+          <div class="location-cnt">
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-1"><span class="name">北京</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-2"><span class="name">武汉</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-3"><span class="name">广州</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-4"><span class="name">深圳</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-5"><span class="name">西安</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-6"><span class="name">成都</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-7"><span class="name">沈阳</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-8"><span class="name">扬州</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-9"><span class="name">宿迁</span><span class="cube"></span></div>
+            </div>
+            <div class="anim-cnt">
+              <div class="cube-cnt cube-cnt-10"><span class="name">上海</span><span class="cube"></span></div>
+            </div>
+          </div>
+        </div>
+        <!-- E 办公地点 -->
+        <!-- S 技术方向 -->
+        <div class="swiper-slide p11" style="height: 812px;">
+          <div class="scene-4-1 j6">
+            <div class="joy-cnt">
+              <div class="joy joy-max"></div>
+              <div class="joy joy-snow"></div>
+              <div class="joy joy-yummy"></div>
+              <div class="joy joy-chill"></div>
+              <div class="joy joy-blink"></div>
+              <div class="joy joy-joy"></div>
+            </div>
+            <div class="job-cnt job-cnt-1 in-right">
+              <div class="job-title">技术方向</div>
+              <div class="job-name">软件开发类 硬件开发类 数据与算法类 安全技术类 测试类 技术支持类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">01</div>
+              </div>
+            </div>
+            <div class="job-cnt job-cnt-2 hide">
+              <div class="job-title">产品方向</div>
+              <div class="job-name">产品策划类 产品运营类 项目类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">02</div>
+              </div>
+            </div>
+            <div class="job-cnt job-cnt-3 hide">
+              <div class="job-title">供应链方向</div>
+              <div class="job-name">供应链管理 客户服务类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">03</div>
+              </div>
+            </div>
+            <div class="job-cnt job-cnt-4 hide">
+              <div class="job-title">金融方向</div>
+              <div class="job-name">金融市场类 金融风控类 金融产品类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">04</div>
+              </div>
+            </div>
+            <div class="job-cnt job-cnt-5 hide">
+              <div class="job-title">设计方向</div>
+              <div class="job-name">视觉设计类 交互设计类 用户研究类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">05</div>
+              </div>
+            </div>
+            <div class="job-cnt job-cnt-6 hide">
+              <div class="job-title">市场职能方向</div>
+              <div class="job-name">采购销售类 市场公关类 人资行政类 法务财务类 战略投资类</div>
+              <div class="page-num-cnt">
+                <div class="page-num">06</div>
+              </div>
+            </div>
+            <div class="cube-1"><span></span></div>
+            <div class="pagination-cnt">
+              <div class="pagination">
+                <span class="total-page">/06</span>
+              </div>
+            </div>
+            <div class="touch-cnt-2" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+            <div class="btn-write" id="J-btn-write">填写信息</div>
+          </div>
+        </div>
+        <!-- E 技术方向 -->
+      </div>
+    </div>
+    <!-- E 主界面 -->
+  </div>
+
+<script>
+  ;(function(h,g,c,e,f,d,b){h.alogObjectName=f;h[f]=h[f]||function(){(h[f].q=h[f].q||[]).push(arguments)};h[f].l=1*new Date();d=g.createElement(c),b=g.getElementsByTagName(c)[0];d.src=e;b.parentNode.insertBefore(d,b)})(window,document,"script","//wqs.jd.com/promote/quark/atlogs.2.0.min.js","ATlog");
+
+  ATlog('init', {
+    app_key: '2018campus', // app_key 系统分配
+    clickEvents: true, // 是否记录所有页面点击
+    mta: true // 是否使用 mta.qq.com 进行兜底
+  });
+</script>
+<script type="text/javascript" src="./js/bundle_10dbb2.js"></script>
+
+</body></html>

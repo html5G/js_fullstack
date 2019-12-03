@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 伪代码
+        // 1. 名字数组变成url数组 
+        // 2. fetch异步
+        // 3. Primise.all
+        // 4. 返回
+        function getData(names) {
+            const primises = names.map(name => fetch(`https://api.github.com/users/${name}`))
+            const people = Promise.all(primises)
+            return people;
+        }
+        const people = getData(['html5G', 'chenshiai', 'llinniee']);
+        console.log(people);
+        people
+            .then(data => {
+                // console.log(data)
+                return Promise.all(data.map(item => item.json()))
+            })
+            .then(data => {
+                console.log(data);
+            })
+    </script>
+</body>
+
+</html>

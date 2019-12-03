@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^7.4.4"
+  },
+  "name": "babel",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

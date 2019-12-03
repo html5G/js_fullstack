@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Number.prototype.add = function(num){
+            // console.log('add 来了');
+            return this + num;
+        }
+        Number.prototype.cheng = function(num){
+            // console.log('add 来了');
+            return this * num;
+        } 
+    var numberObj = new Number(5);
+    console.log(numberObj._proto_);
+    console.log((6).add(5).cheng(2));
+    console.log(numberObj.cheng(3));
+    </script>
+</body>
+</html>

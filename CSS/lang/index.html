@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jpuery-latest.min.js">
+</script>
+<script type="text/javascript">
+function incCount(){
+    var count = 0;
+    count+=1;
+    return count;
+}
+function countIt(){
+    $("#counter").html(incCount);
+}
+</script>
+<style type="textt/css">
+button{
+    background-color: #0066AA;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #c0c0c0;
+    width: 100px;
+}
+</style>
+</head>
+
+<body>
+    <button onclick = "countIt()">CLInk me</button>
+    <div id=" counter"></div>
+</body>
+</html>

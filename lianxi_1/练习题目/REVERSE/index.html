@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+      let arr = [1,2,3,4,5,6];
+      function res(num) {
+        //  let s = num.toString();
+         //toString是将为装换为字符串
+         let s = num.toString();
+         let a = [];
+         for(let i = 0; i < s.length; i++) {
+            a.unshift(s[i]);
+         }
+         return a.join('');
+        //  console.log(s[6]);
+      }   
+      console.log(res('a b c'));
+    </script> -->
+    <script>
+      function minNumber(numbers) {
+        // return numbers.sort();
+        //sort只能识别1位数字
+        numbers.sort(compare);
+        let res = '';
+        for(let i = 0;i < numbers.length; i++) {
+            res += numbers[i];
+        }
+        return res;
+      }
+    //   minNumber([3,4,9,5,1,2,6]);
+    //   console.log(minNumber([3,40,9,51,1,2,6]));
+    function compare(a,b) {
+       let str1 = a + "" + b;
+       let str2 = b + "" + a;
+        // console.log(str1);
+        // console.log(str2);
+        // console.log(str1.charAt(0));
+        for(let i = 0; i < str1.length; i++) {
+            if (str1.charAt(i) > str2.charAt(i)) {
+                return 1;
+            } 
+            if (str1.charAt(i) < str2.charAt(i)) {
+                return -1;
+            }
+        }
+        return 1;
+     }
+     console.log(minNumber([1,90,30,40]));
+    
+ //    compare(2,3);
+    </script>
+</body>
+</html>

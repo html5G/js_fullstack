@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="content">
+
+     <view class="content-v" bindtap="vehicle">        
+       <image src="/image/vehicle.png" class="er" />  
+        <text class='text'>车型大全</text>    
+     </view>
+     
+     <view class="content-v" bindtap="photograph">      
+      <image src="/image/photograph.png"  class="er" /> 
+      <view><text  class='text'>拍照识车</text></view>
+     </view>    
+
+     <view class="content-v" bindtap="release">      
+      <image src="/image/release.png"  class="er" /> 
+      <view><text class='text'>新车发布</text></view>
+     </view>
+
+     <view class="content-v" bindtap="ranking"> 
+      <image src="/image/ranking.png"  class="er" />
+      <view><text class='text'>销量排行</text></view>
+     </view>
+
+  </view>
+ <scroll-view
+  scroll-y ="true"
+  scroll-into-view="{{toView}}"
+  scroll-with-animation="true"
+  onReachBottom =" true"
+  >
+   <block wx:for="{{navData}}"
+    wx:key="{{index}}"
+    wx:for-item="navData">
+    <view class="product">
+        <navigator wx:for="{{5}}" wx:key="index"
+        class="product-for">
+            <view class="classname">
+            {{navData.biaoqian}}
+              </view>
+          <view class="images">
+            <image src="{{navData.image1}}" class="et"></image>
+            <image src="{{navData.image2}}" class="et"></image>
+            <image src="{{navData.image3}}" class="et"></image>
+          </view>
+            <view class="zuozhe">
+              {{navData.zuozhe}}
+              </view>
+            <view class="shijian">
+             {{navData.shijian}}
+            </view>
+        </navigator>
+    </view>  
+  </block>
+ </scroll-view>
+</view>

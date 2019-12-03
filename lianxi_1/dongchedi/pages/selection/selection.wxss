@@ -1,0 +1,18 @@
+/* pages/selection/selection.wxss */
+.page{
+    width: 100%;
+    overflow: hidden;
+}
+.chexing{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    position: absolute;
+}
+.che{
+    align-self: center;
+    height: 20px;
+    width: 20px; 
+    margin-top: 10px;
+}
+
