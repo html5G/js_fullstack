@@ -26,6 +26,7 @@ Page({
           })
           .get()
           .then(res => {
+            console.log(res)
             this.setData({
               youhuiLists:res.data[0]['youhuiLists']
             })

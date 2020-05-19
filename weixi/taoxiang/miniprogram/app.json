@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/openapi/openapi"
@@ -13,8 +13,35 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "掏转",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#AB956D",
+    "borderStyle": "black",
+    "backgroundColor": "#f5f5f5",
+    "selectedindex": 1,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/12.png",
+        "selectedIconPath": "image/11.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "image/22.png",
+        "selectedIconPath": "image/21.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "image/32.png",
+        "selectedIconPath": "image/31.png",
+        "text": "购物车"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

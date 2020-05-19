@@ -13,7 +13,7 @@ cloud.init()
 const db = cloud.database();
 function youhuiSpider() {
   return new Promise((resolve, reject) => {
-    request('https://www.smzdm.com/youhui/',
+    request('',
       (err, res) => {
         if(err) {
           reject('net error');

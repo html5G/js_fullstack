@@ -10,7 +10,7 @@ Page({
       sizeType:['original','compressed'],
       sourceType:['album','camera'],
       success(res) {
-        console.log(res)
+        console.log('9999'.res)
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
         })
@@ -39,7 +39,7 @@ Page({
     })
   },
   previewImage(e) {
-    console.log(e)
+    console.log('6666',e)
     wx.previewImage({
       current:e.currentTarget.id,
       urls: this.data.files

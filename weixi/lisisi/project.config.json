@@ -2,17 +2,16 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
-		"checkInvalidKey": true
+		"enhance": true
 	},
-	"appid": "wx9576764d83a0a314",
-	"projectname": "taoxiang",
-	"libVersion": "2.2.5",
+	"appid": "wxc75b88440f8fc25e",
+	"projectname": "lisisi",
+	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
